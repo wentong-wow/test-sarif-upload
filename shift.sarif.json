@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main_shift.rs"
+                },
+                "region": {
+                  "byteLength": 8,
+                  "byteOffset": 561,
+                  "endColumn": 21,
+                  "endLine": 19,
+                  "startColumn": 13,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "almost complete ascii range"
+          },
+          "relatedLocations": [
+            {
+              "message": {
+                "text": "use an inclusive range \"..=\""
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main_shift.rs"
+                },
+                "region": {
+                  "byteLength": 2,
+                  "byteOffset": 564,
+                  "endColumn": 18,
+                  "endLine": 19,
+                  "startColumn": 16,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "ruleId": "clippy::almost_complete_range",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main_shift.rs"
+                },
+                "region": {
+                  "byteLength": 12,
+                  "byteOffset": 335,
+                  "endColumn": 20,
+                  "endLine": 12,
+                  "startColumn": 8,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "this comparison involving the minimum or maximum element for this type contains a case that is always true or always false"
+          },
+          "relatedLocations": [],
+          "ruleId": "clippy::absurd_extreme_comparisons",
+          "ruleIndex": 1
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://rust-lang.github.io/rust-clippy/",
+          "name": "clippy",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#almost_complete_range\n`#[warn(clippy::almost_complete_range)]` on by default\n"
+              },
+              "helpUri": "https://rust-lang.github.io/rust-clippy/master/index.html#almost_complete_range",
+              "id": "clippy::almost_complete_range"
+            },
+            {
+              "fullDescription": {
+                "text": "because `i32::MIN` is the minimum value for this type, this comparison is always false\nfor further information visit https://rust-lang.github.io/rust-clippy/master/index.html#absurd_extreme_comparisons\n`#[deny(clippy::absurd_extreme_comparisons)]` on by default\n"
+              },
+              "id": "clippy::absurd_extreme_comparisons"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}
