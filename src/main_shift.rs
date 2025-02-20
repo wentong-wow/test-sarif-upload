@@ -1,4 +1,3 @@
-// shift line
 fn foo(n: i32) -> i32 {
     n + 1
 }

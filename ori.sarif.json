@@ -9,7 +9,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main.rs"
+                  "uri": "src/main_shift.rs"
                 },
                 "region": {
                   "byteLength": 8,
@@ -54,7 +54,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "src/main.rs"
+                  "uri": "src/main_shift.rs"
                 },
                 "region": {
                   "byteLength": 12,
