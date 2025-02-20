@@ -17,7 +17,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: ori.sarif.json
+          sarif_file: shift.sarif.json
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           category: my-analysis-tool
