@@ -5,11 +5,19 @@ on:
     branches: [main]
 
 jobs:
-  upload-sarif:
-    name: Upload SARIF Report
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
     steps:
-      - name: Upload SARIF to GitHub
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: ori.sarif.json
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: results.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: my-analysis-tool
